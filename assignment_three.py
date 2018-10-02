@@ -18,7 +18,16 @@ def get_color():
     plus_color = input("what color should your plus sign be?")
     return plus_color
 
-def draw_plus_sign(side_length):
+
+def draw_plus_sign(side_length, plus_color):
+    """
+    this program draws the plus sign with the given side lengths and color
+    :param side_length: this decides whe the side langth of the plus sign will be
+    :param plus_color: this decides what the color of the plus sign will be
+    :return: this returns the function
+    """
+    turtle.color(plus_color)
+    turtle.begin_fill()
     turtle.forward(side_length)
     turtle.left(90)
     turtle.forward(side_length)
@@ -48,20 +57,20 @@ def draw_plus_sign(side_length):
 def recenter():
     """
     this program recenters turtle to 0,0
-    :return: returns recenter
+    :return: returns the function
     """
     turtle.penup()
     turtle.goto(0,0)
-    return recenter()
+
+
 
 
 def main():
     side_length = get_side_length()
     plus_color = get_color()
-
     turtle.color(plus_color)
     turtle.begin_fill()
-    draw_plus_sign(side_length)
+    draw_plus_sign(side_length, plus_color)
     turtle.end_fill()
     turtle.penup()
     turtle.forward(side_length)
@@ -70,8 +79,9 @@ def main():
     turtle.left(90)
     turtle.pendown()
     turtle.begin_fill()
-    draw_plus_sign(side_length)
-    turtle.end_fill
+    draw_plus_sign(side_length, plus_color)
+    turtle.end_fill()
+
 
     recenter()
     turtle.left(90)
@@ -80,7 +90,7 @@ def main():
     turtle.forward(side_length)
     turtle.pendown()
     turtle.begin_fill()
-    draw_plus_sign(side_length)
+    draw_plus_sign(side_length, plus_color)
     turtle.end_fill()
 
     recenter()
@@ -91,7 +101,7 @@ def main():
     turtle.left(180)
     turtle.pendown()
     turtle.begin_fill()
-    draw_plus_sign(side_length)
+    draw_plus_sign(side_length, plus_color)
     turtle.end_fill()
     recenter()
     turtle.right(180)
@@ -101,7 +111,7 @@ def main():
     turtle.right(90)
     turtle.pendown()
     turtle.begin_fill()
-    draw_plus_sign(side_length)
+    draw_plus_sign(side_length, plus_color)
     turtle.end_fill()
     turtle.exitonclick()
 
