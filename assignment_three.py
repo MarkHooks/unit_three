@@ -1,6 +1,11 @@
+#this program draws 5 plus signs with the given side lengths and color
+
 import turtle
 
 turtle.speed(20)
+
+#this is to get the side length from the user
+
 
 def get_side_length():
     """
@@ -10,6 +15,9 @@ def get_side_length():
     side_length = float(input("what is the side length?"))
     return side_length
 
+#this is to get the color of the plus sign from the user
+
+
 def get_color():
     """
     this program is to get the plus sign color
@@ -17,6 +25,8 @@ def get_color():
     """
     plus_color = input("what color should your plus sign be?")
     return plus_color
+
+#this draws the plus sign
 
 
 def draw_plus_sign(side_length, plus_color):
@@ -53,6 +63,8 @@ def draw_plus_sign(side_length, plus_color):
     turtle.forward(side_length)
     turtle.end_fill()
 
+#this is to recenter turtle to 0,0
+
 
 def recenter():
     """
@@ -61,8 +73,6 @@ def recenter():
     """
     turtle.penup()
     turtle.goto(0,0)
-
-
 
 
 def main():
@@ -81,8 +91,6 @@ def main():
     turtle.begin_fill()
     draw_plus_sign(side_length, plus_color)
     turtle.end_fill()
-
-
     recenter()
     turtle.left(90)
     turtle.forward(side_length)
@@ -92,7 +100,6 @@ def main():
     turtle.begin_fill()
     draw_plus_sign(side_length, plus_color)
     turtle.end_fill()
-
     recenter()
     turtle.right(90)
     turtle.forward(side_length)
@@ -114,5 +121,4 @@ def main():
     draw_plus_sign(side_length, plus_color)
     turtle.end_fill()
     turtle.exitonclick()
-
 main()
